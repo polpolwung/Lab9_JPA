@@ -5,10 +5,80 @@
  */
 package models;
 
+import java.io.Serializable;
+
 /**
  *
  * @author polwu
  */
-public class User {
-    
+public class User implements Serializable{
+   private String email;
+   private boolean isActive;
+   private String fName;
+   private String lName;
+   private String password;
+   private Role role;
+
+    public User() {
+    }
+
+    public User(String email, boolean isActive, String fName, String lName, String password, Role role) {
+        this.email = email;
+        this.isActive = isActive;
+        this.fName = fName;
+        this.lName = lName;
+        this.password = password;
+        this.role = role;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(boolean isActive) {
+        this.isActive = isActive;
+    }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+   
+   
+   
 }
