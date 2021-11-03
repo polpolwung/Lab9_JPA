@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 3, 2021, 3:46:51 PM
+    Author     : 775262
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.container{
+    margin-top: 50px;
+    display: block;
+    width: 90vw;
+    margin-left: auto;
+    /*margin-right: auto;*/
+}
+
+.body-container{
+    display: flex;
+}
+
+.add-container{
+    width: 20vw;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.table-container{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    /*background-color: pink;*/
+}
+
+.edit-container{
+    display: flex;
+    flex-direction: column;
+    width:20vw;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}*/
+
+
+
+input[type=text], input[type=password],select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffd6dd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 8px 0;
+    resize: vertical;
+}
+
+
+input[type=checkbox]{
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+
+
+
+input[type=submit]{
+    background-color: pink; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+
+th, td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    /*color: #fff;*/
+}
+
+th {
+    text-align: left;
+    background-color: pink;
+}
+
+/*thead {
+    th {
+        background-color: #55608f;
+    }
+}*/
+
+/*tbody {
+    tr {
+        &:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+    }
+    td {
+        position: relative;
+        &:hover {
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -9999px;
+                bottom: -9999px;
+                background-color: rgba(255,255,255,0.2);
+                z-index: -1;
+            }
+        }
+    }
+}*/
