@@ -15,6 +15,10 @@ import java.util.*;
  */
 public class UserService {
 
+    public User getUser(List<User> lst, String email) {
+        return lst.stream().filter(user -> email.equals(user.getEmail().replace(" ", ""))).findFirst().orElse(null);
+    }
+
     public List<User> getAll() throws Exception {
         return new UserDB().getAll();
     }
@@ -22,11 +26,11 @@ public class UserService {
     public void insert(User user) throws Exception {
         new UserDB().insert(user);
     }
-    
+
     public void update(User user) throws Exception {
         new UserDB().update(user);
     }
-    
+
     public void delete(User user) throws Exception {
         new UserDB().delete(user);
     }

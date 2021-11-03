@@ -26,12 +26,12 @@ public class UserDB {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                String email = rs.getString(2);
-                boolean isActive = rs.getBoolean(3);
-                String fname = rs.getString(4);
-                String lname = rs.getString(5);
-                String password = rs.getString(6);
-                int role = rs.getInt(7);
+                String email = rs.getString(1);
+                boolean isActive = rs.getBoolean(2);
+                String fname = rs.getString(3);
+                String lname = rs.getString(4);
+                String password = rs.getString(5);
+                int role = rs.getInt(6);
                 User user = new User(email, isActive, fname, lname, password, role);
                 users.add(user);
 
