@@ -5,10 +5,30 @@
  */
 package services;
 
+import dataaccess.UserDB;
+import models.User;
+import java.util.*;
+
 /**
  *
  * @author polwu
  */
 public class UserService {
+
+    public List<User> getAll() throws Exception {
+        return new UserDB().getAll();
+    }
+
+    public void insert(User user) throws Exception {
+        new UserDB().insert(user);
+    }
     
+    public void update(User user) throws Exception {
+        new UserDB().update(user);
+    }
+    
+    public void delete(User user) throws Exception {
+        new UserDB().delete(user);
+    }
+
 }
