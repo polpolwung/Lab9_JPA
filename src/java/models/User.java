@@ -17,12 +17,12 @@ public class User implements Serializable{
    private String fName;
    private String lName;
    private String password;
-   private Role role;
+   private int role;
 
     public User() {
     }
 
-    public User(String email, boolean isActive, String fName, String lName, String password, Role role) {
+    public User(String email, boolean isActive, String fName, String lName, String password, int role) {
         this.email = email;
         this.isActive = isActive;
         this.fName = fName;
@@ -71,11 +71,11 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    public Role getRole() {
+    public int getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(int role) {
         this.role = role;
     }
    

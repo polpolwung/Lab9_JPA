@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/Lab7_JDBC"/>
-  <Resource
+<Context path="/Lab7_JDBC">
+    <Resource
         name="Lab7_JDBC/userdb"
         url="jdbc:mysql://localhost:3307/userdb" 
         username="root"
@@ -15,3 +15,25 @@
         type="javax.sql.DataSource"
         auth="Container"
     />
+</Context>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/Lab7_JDBC"/>
+<Resource
+      name="Lab7_JDBC/userdb"
+      url="jdbc:mysql://localhost:3307/userdb" 
+      username="root"
+      password="password"
+      maxActive="100"
+      maxIdle="30"
+      maxWait="10000" 
+      logAbandoned="true"
+      removeAbandoned="true" 
+      removeAbandonedTimeout="60"
+      driverClassName="com.mysql.jdbc.Driver"
+      type="javax.sql.DataSource"
+      auth="Container"
+  />
+</Context>-->
+  
