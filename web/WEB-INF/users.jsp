@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href=" css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
         <title>User Database</title>
     </head>
     <body>
@@ -37,7 +37,9 @@
                         </div>
                         <div>
                             <select name="role">
-                                <option value="1">Admin</option>
+                                <c:forEach items="${roles}" var="role">
+                                    <option value="${role.roleID}">${role.roleName}</option>
+                                </c:forEach>
                             </select>
                             <label for="isActive">Active</label>
                             <input type="checkbox" id="isActive" name="isActive" value="true">
@@ -96,7 +98,12 @@
                         </div>
                         <div>
                             <select name="role-e">
-                                <option value="1">Admin</option>
+                                
+                                <c:forEach items="${roles}" var="role">
+                                    <option value="${role.roleID}" ${user.role == role.roleID? "selected" : null}>${role.roleName}</option>
+                                </c:forEach>
+                                
+                                
                             </select>
                             <label for="isActive-e">Active</label>
                             <input type="checkbox" id="isActive-e" name="isActive-e" value="true">
