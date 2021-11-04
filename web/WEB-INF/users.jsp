@@ -98,15 +98,15 @@
                         </div>
                         <div>
                             <select name="role-e">
-                                
+
                                 <c:forEach items="${roles}" var="role">
                                     <option value="${role.roleID}" ${user.role == role.roleID? "selected" : null}>${role.roleName}</option>
                                 </c:forEach>
-                                
-                                
+
+
                             </select>
                             <label for="isActive-e">Active</label>
-                            <input type="checkbox" id="isActive-e" name="isActive-e" value="true">
+                            <input type="checkbox" id="isActive-e" name="isActive-e" value="true" ${user.isActive != null ? "checked":null}>
                         </div>
                         <input name="action" value="edit" type="hidden">
                         <input class="button" type="submit" value="Confirm">
