@@ -6,7 +6,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,7 +34,7 @@ public class UserServlet extends HttpServlet {
         List<Role> roles = (List<Role>) session.getAttribute("rolls");
         if (roles == null) {
             try {
-                roles = rs.getAll();
+                roles = (List<Role>) rs.getAll();
                 session.setAttribute("roles", roles);
             } catch (Exception ex) {
                 Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);

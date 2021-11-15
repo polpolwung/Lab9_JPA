@@ -7,7 +7,6 @@ package services;
 
 import dataaccess.RoleDB;
 import models.Role;
-import java.util.*;
 
 /**
  *
@@ -15,7 +14,7 @@ import java.util.*;
  */
 public class RoleService {
  
-    public List<Role> getAll()throws Exception{
+    public Role getAll()throws Exception{
         return new RoleDB().getAll();
     }
             
